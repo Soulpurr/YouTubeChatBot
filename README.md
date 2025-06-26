@@ -1,70 +1,91 @@
-# 🎥 YouTube Transcript Assistant
+# 🎥 YouTube ChatBot
 
-This is a Streamlit-based app that allows users to interact with YouTube video transcripts. You can:
-- Ask questions about a video transcript
-- Generate concise or detailed summaries
-- Choose from available transcript languages
-- Get responses in the language of the transcript
+<img src="assets/preview.png" alt="App Screenshot" width="100%">
 
-## 🔧 Features
+YouTube Transcript Assistant is a Streamlit-based AI tool that helps you:
 
-- **Multilingual Transcript Support**: Detects available languages and allows you to select which one to use.
-- **Retrieval-Augmented Q&A**: Ask context-aware questions using similarity, MMR, or compressed retrievers.
-- **Summarization Options**: Choose between a concise or detailed summary of the transcript.
-- **Gemini Integration**: Uses Gemini 1.5 Flash API for high-quality responses and summaries.
+- ✅ Ask questions about YouTube video content
+- ✅ Generate **concise** or **detailed summaries**
+- ✅ Detect available transcript languages and choose which one to interact in
+- ✅ Get answers or summaries in the language of your choice
+
+Built with LangChain, FAISS, and Google's Gemini 1.5 Flash model.
+
+---
 
 ## 📂 Project Structure
 
-├── ui.py # Main Streamlit application
-├── chatbot.py # Utility logic for transcript retrieval, vector store, chains
-├── summarization_chain.py # Logic for hierarchical summarization
-├── .env # Environment file (ignored by Git)
-├── .gitignore # Git ignore configuration
-└── requirements.txt # Required Python packages
+.
+├── ui.py # Main Streamlit interface
+├── chatbot.py # Core logic and chains
+├── summarization_chain.py # Hierarchical summarization logic
+├── .env # Stores environment variables like API keys
+├── .gitignore # Ignores .env and other files
+├── requirements.txt # Required Python packages
+└── README.md # You're reading it!
 
-bash
+markdown
 Copy
 Edit
 
-## ▶️ Getting Started
+---
 
-### 1. Clone the repository
+## 🔧 Requirements
+
+These libraries are used in the project:
+
+- `streamlit`
+- `langchain`
+- `langchain-core`
+- `langchain-community`
+- `langchain-google-genai`
+- `faiss-cpu`
+- `python-dotenv`
+- `youtube-transcript-api`
+
+Install them via:
+
 ```bash
-git clone https://github.com/Soulpurr/YouTubeChatBot.git
-2. Install dependencies
-Make sure you have Python 3.10+ and install dependencies with:
-
+pip install -r requirements.txt
+🚀 Running the App
+1. Clone the repository
 bash
 Copy
 Edit
-pip install -r requirements.txt
-3. Set up environment
-Create a .env file and add your Gemini API key:
+git clone https://github.com/Soulpurr/YouTubeChatBot.git
+cd youtube-transcript-assistant
+2. Set up the .env file
+Create a .env file in the root directory and add your Google Gemini API key:
 
 ini
 Copy
 Edit
-GOOGLE_API_KEY=your_google_api_key
-4. Run the app
+GOOGLE_API_KEY=your_api_key_here
+3. Launch the app
 bash
 Copy
 Edit
 streamlit run ui.py
-✅ Usage
-Paste a YouTube URL or video ID.
+🧠 Features
+🔍 Multilingual Support: See all languages available for a video and chat in any of them.
 
-Select a language from the available transcript options.
+💬 Q&A Mode: Ask any question related to the transcript using three different retrieval modes.
 
-Ask questions, or click buttons to generate summaries.
+🧾 Concise & Detailed Summaries: Choose the granularity of your summary.
 
-🧠 Technologies Used
-LangChain for building language model chains
+📚 Compression Retrieval: Optionally compress context using Gemini before answering.
 
-Gemini API (Google Generative AI) for summarization and answering
+📸 Image Preview
+Place your screenshot in the assets/preview.png location (or update the image path above).
 
-YouTube Transcript API for fetching transcripts
+🙌 Contributing
+Pull requests are welcome! Feel free to open issues or suggest features.
 
-Streamlit for building the UI
+📄 License
+MIT License © 2025 Your Name
 
-FAISS for vector search
+pgsql
+Copy
+Edit
 
+Let me know if you want to include badges (e.g., Streamlit Cloud, Python version, Gemini), or if you want a `requirements.txt` file generated too.
