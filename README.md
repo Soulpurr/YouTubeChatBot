@@ -30,8 +30,7 @@ Edit
 
 ### 1. Clone the repository
 ```bash
-git clone https://github.com/yourusername/youtube-transcript-assistant.git
-cd youtube-transcript-assistant
+git clone https://github.com/Soulpurr/YouTubeChatBot.git
 2. Install dependencies
 Make sure you have Python 3.10+ and install dependencies with:
 
